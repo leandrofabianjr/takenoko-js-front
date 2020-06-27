@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "takenoko-js-front"
+    }
+  },
+  "defaultProject": "takenoko-js-front",
+  "cli": {
+    "analytics": false
+  }
 }
