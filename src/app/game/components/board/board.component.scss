@@ -1,0 +1,16 @@
+@import "src/utils";
+.terrain-grid-container {
+    width: 100%;
+    height: 100%;
+    background-color: #B86;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terrain-grid-line {
+    display: flex;
+    &:nth-child(odd) {
+        transform: translateX($terrain-width / 2);
+    }
+}

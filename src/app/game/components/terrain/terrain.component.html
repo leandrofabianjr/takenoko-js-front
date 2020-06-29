@@ -1,0 +1,6 @@
+<div *ngIf="!slot" class="empty-terrain"></div>
+<div *ngIf="!slot?.terrain && slot?.canBeTerrain" class="can-be-terrain" (click)="onSelected()"></div>
+<div *ngIf="slot?.terrain?.isFountain" class="terrain fountain"></div>
+<div *ngIf="slot?.terrain && !slot.terrain?.isFountain" class="terrain" [class]="slot.terrain.color">
+    <div class="improvement"></div>
+</div>

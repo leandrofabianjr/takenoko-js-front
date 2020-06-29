@@ -1,0 +1,7 @@
+<div class="terrain-grid-container">
+    <div class="terrain-grid">
+        <div *ngFor="let line of board?.slots" class="terrain-grid-line">
+            <tk-terrain *ngFor="let slot of line" class="terrain" [slot]="slot" (selected)="selected($event)"></tk-terrain>
+        </div>
+    </div>
+</div>
