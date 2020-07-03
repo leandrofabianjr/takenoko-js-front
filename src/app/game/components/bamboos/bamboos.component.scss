@@ -1,0 +1,22 @@
+.bamboos-container {
+    width: 12px;
+    box-shadow: 2px 0 8px 1px rgba(100, 100, 100, 0.4);
+    .bamboo {
+        height: 20px;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        &:first-child {
+            border-top: none;
+        }
+    }
+    &.bamboos-color-green {
+        background-color: #006c00;
+    }
+    &.bamboos-color-pink {
+        background-color: #d37996;
+    }
+    &.bamboos-color-yellow {
+        background-color: #d6d600;
+    }
+}

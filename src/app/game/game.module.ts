@@ -5,6 +5,8 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { PlayerPlaceComponent } from './components/player-place/player-place.component';
 import { GameComponent } from './game.component';
 import { TerrainComponent } from './components/terrain/terrain.component';
+import { ImprovementComponent } from './components/improvement/improvement.component';
+import { BamboosComponent } from './components/bamboos/bamboos.component';
 
 
 const config: SocketIoConfig = { url: 'http://localhost:4444', options: {} };
@@ -14,7 +16,9 @@ const config: SocketIoConfig = { url: 'http://localhost:4444', options: {} };
     GameComponent,
     PlayerPlaceComponent,
     BoardComponent,
-    TerrainComponent
+    TerrainComponent,
+    ImprovementComponent,
+    BamboosComponent
   ],
   imports: [
     CommonModule,
