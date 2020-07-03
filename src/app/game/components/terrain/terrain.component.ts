@@ -15,7 +15,6 @@ export class TerrainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.slot);
   }
 
   onSelected() {

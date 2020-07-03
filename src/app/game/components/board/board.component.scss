@@ -11,6 +11,6 @@
 .terrain-grid-line {
     display: flex;
     &:nth-child(odd) {
-        transform: translateX($terrain-width / 2);
+        transform: translateX($terrain-margin-left-right + $terrain-width / 2);
     }
 }

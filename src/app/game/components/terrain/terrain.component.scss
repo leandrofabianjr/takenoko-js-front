@@ -1,72 +1,41 @@
 @import "src/utils";
 :host {
     display: block;
-    width: auto;
-    height: auto;
-}
-
-@mixin hexagon($color, $hexagon-width) {
-    $hexagon-side: $hexagon-width * 0.5773;
-    $hexagon-side-half: $hexagon-side / 2;
-    & {
-        position: relative;
-        width: $hexagon-width;
-        height: $hexagon-side;
-        background-color: $color;
-        margin: $hexagon-side-half / 2 + 1px 1px;
-    }
-    &:before,
-    &:after {
-        content: "";
-        position: absolute;
-        width: 0;
-        border-left: $hexagon-width * 0.5 solid transparent;
-        border-right: $hexagon-width * 0.5 solid transparent;
-    }
-    &:before {
-        bottom: 100%;
-        border-bottom: $hexagon-side-half solid $color;
-    }
-    &:after {
-        top: 100%;
-        width: 0;
-        border-top: $hexagon-side-half solid $color;
-    }
-}
-
-@mixin hexagonTerrain($color) {
-    @include hexagon($color, $terrain-width);
+    width: $terrain-width;
+    height: $terrain-width * $hexagon-height-rate;
+    margin: $terrain-margin-top-bottom $terrain-margin-left-right;
+    position: relative;
 }
 
 .terrain {
+    position: relative;
+    @include hexagon($terrain-width);
     &.green {
-        @include hexagonTerrain(green);
+        background-color: $terrain-color-green;
     }
     &.pink {
-        @include hexagonTerrain(pink);
+        background-color: $terrain-color-pink;
     }
     &.yellow {
-        @include hexagonTerrain(yellow);
+        background-color: $terrain-color-yellow;
     }
     &.fountain {
-        @include hexagonTerrain(blue);
-    }
-    position: relative;
-    .improvement {
-        position: absolute;
-        left: 50%;
-        top: 100%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        @include hexagon(white, $terrain-width/3);
+        background-color: $terrain-color-fountain;
     }
 }
 
 .empty-terrain {
-    @include hexagonTerrain(transparent);
+    background-color: transparent;
+    @include hexagon($terrain-width);
 }
 
 .can-be-terrain {
     cursor: pointer;
-    @include hexagonTerrain(transparentize(#ccc, .5));
+    @include hexagon($terrain-width, transparentize(#ccc, 0.5));
+}
+
+.terrain-bamboos {
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
 }
