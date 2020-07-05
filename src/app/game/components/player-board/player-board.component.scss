@@ -1,0 +1,7 @@
+.objects-container {
+    position: relative;
+    display: flex;
+    &>* {
+        padding-left: 8px;
+    }
+}
