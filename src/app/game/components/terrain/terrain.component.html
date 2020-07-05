@@ -1,9 +1,7 @@
-<div *ngIf="!slot" class="empty-terrain"></div>
-<div *ngIf="!slot?.terrain && slot?.canBeTerrain" class="can-be-terrain" (click)="onSelected()"></div>
-<div *ngIf="slot?.terrain?.isFountain" class="terrain fountain"></div>
-<ng-container *ngIf="slot?.terrain && !slot.terrain?.isFountain">
-    <div class="terrain" [class]="slot.terrain.color">
-        <tk-improvement [type]="slot.terrain?.improvement"></tk-improvement>
-    </div>
+<div class="terrain-container" [class]="terrainTypeClass" (click)="onSelected()">
+</div>
+
+<ng-container *ngIf="isTerrain">
+    <tk-improvement class="terrain-improvement" [type]="slot.terrain?.improvement"></tk-improvement>
     <tk-bamboos *ngIf="slot.terrain?.bamboos" class="terrain-bamboos" [color]="slot.terrain.color" [quantity]="slot.terrain.bamboos"></tk-bamboos>
 </ng-container>

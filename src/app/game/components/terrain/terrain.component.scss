@@ -7,9 +7,11 @@
     position: relative;
 }
 
-.terrain {
-    position: relative;
+.terrain-container {
     @include hexagon($terrain-width);
+}
+
+.terrain {
     &.green {
         background-color: $terrain-color-green;
     }
@@ -19,19 +21,26 @@
     &.yellow {
         background-color: $terrain-color-yellow;
     }
-    &.fountain {
-        background-color: $terrain-color-fountain;
-    }
+}
+
+.fountain {
+    background-color: $terrain-color-fountain;
 }
 
 .empty-terrain {
     background-color: transparent;
-    @include hexagon($terrain-width);
 }
 
 .can-be-terrain {
     cursor: pointer;
-    @include hexagon($terrain-width, transparentize(#ccc, 0.5));
+    background-color: transparentize(#ccc, 0.5);
+}
+
+.terrain-improvement {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
 }
 
 .terrain-bamboos {
