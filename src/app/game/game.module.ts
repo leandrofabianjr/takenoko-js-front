@@ -7,6 +7,9 @@ import { GameComponent } from './game.component';
 import { TerrainComponent } from './components/terrain/terrain.component';
 import { ImprovementComponent } from './components/improvement/improvement.component';
 import { BamboosComponent } from './components/bamboos/bamboos.component';
+import { PlayerBoardComponent } from './components/player-board/player-board.component';
+import { IrrigationComponent } from './components/irrigation/irrigation.component';
+import { ObjectComponent } from './components/player-board/object/object.component';
 
 
 const config: SocketIoConfig = { url: 'http://localhost:4444', options: {} };
@@ -18,7 +21,10 @@ const config: SocketIoConfig = { url: 'http://localhost:4444', options: {} };
     BoardComponent,
     TerrainComponent,
     ImprovementComponent,
-    BamboosComponent
+    BamboosComponent,
+    PlayerBoardComponent,
+    IrrigationComponent,
+    ObjectComponent
   ],
   imports: [
     CommonModule,

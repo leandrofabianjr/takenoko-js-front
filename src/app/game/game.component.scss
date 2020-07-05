@@ -3,7 +3,17 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    .board-container {
+    .game-bottom {
+        background-color: #B86;
         flex: 1;
+        display: flex;
+        padding: 16px;
+        .player-board {
+            align-self: flex-end;
+            background-color: transparent;
+        }
+        .game-board {
+            flex: 1;
+        }
     }
 }
