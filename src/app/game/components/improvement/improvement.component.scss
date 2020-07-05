@@ -1,24 +1,14 @@
 @import "src/utils";
-$color-fertilizer: #96724e;
-$color-watershed: #3866b4;
-$color-enclosure: #c31810;
-:host {
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
 .improvement-border {
     @include hexagon($improvement-width);
     position: relative;
     .improvement-content {
+        @include hexagon($improvement-width - 8px);
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        @include hexagon($improvement-width - 8px, white);
+        // background-color: white;
     }
     .improvement-fertilizer>& {
         background-color: $color-fertilizer
