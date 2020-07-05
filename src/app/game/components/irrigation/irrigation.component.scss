@@ -1,0 +1,20 @@
+@import "src/utils";
+.irrigation {
+    height: $terrain-width * $hexagon-height-rate / 2 + $terrain-margin-left-right;
+    width: 8px;
+    background-color: $color-watershed;
+}
+
+._show {
+    transform: rotate(45deg);
+}
+
+._1 {
+    transform: rotate(60deg);
+}
+
+._2 {
+    transform: rotate(-60deg);
+}
+
+._3 {}
