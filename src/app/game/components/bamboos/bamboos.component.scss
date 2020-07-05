@@ -1,22 +1,22 @@
+@import "src/utils";
 .bamboos-container {
     width: 12px;
     box-shadow: 2px 0 8px 1px rgba(100, 100, 100, 0.4);
     .bamboo {
-        height: 20px;
-        bottom: 0;
-        left: 0;
+        content: "";
+        height: $bamboo-height;
         border-top: 1px solid rgba(0, 0, 0, 0.2);
         &:first-child {
             border-top: none;
         }
     }
-    &.bamboos-color-green {
+    &.bamboos-color-green>.bamboo {
         background-color: #006c00;
     }
-    &.bamboos-color-pink {
+    &.bamboos-color-pink>.bamboo {
         background-color: #d37996;
     }
-    &.bamboos-color-yellow {
+    &.bamboos-color-yellow>.bamboo {
         background-color: #d6d600;
     }
 }
