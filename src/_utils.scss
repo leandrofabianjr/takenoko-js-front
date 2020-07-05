@@ -2,14 +2,17 @@ $terrain-color-fountain: #7eb7dc;
 $terrain-color-green: #669f6f;
 $terrain-color-pink: #e9b3b1;
 $terrain-color-yellow: #dbb262;
+$color-fertilizer: #96724e;
+$color-watershed: #3866b4;
+$color-enclosure: #c31810;
 $hexagon-height-rate: 1.1546;
 $terrain-width: 80px;
 $terrain-margin-left-right: 1px;
 $terrain-margin-top-bottom: $terrain-margin-left-right - $terrain-width * $hexagon-height-rate / 8;
 $improvement-width: $terrain-width / 3;
-@mixin hexagon($hexagon-width, $color: transparent) {
+$bamboo-height: 20px;
+@mixin hexagon($hexagon-width) {
     width: $hexagon-width;
     height: $hexagon-width * $hexagon-height-rate;
-    background-color: $color;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
